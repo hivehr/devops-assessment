@@ -9,6 +9,8 @@ const app = express();
 
 app.get("/hive", controller.hive);
 
+app.get("/healthcheck", controller.healthcheck);
+
 app.listen(process.env.PORT, () => {
     logger.info({ port: process.env.PORT }, "App listening");
 });
